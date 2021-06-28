@@ -69,7 +69,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav fs-5">
         <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
-        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+        <a class="nav-link" href="contact">Contact</a>
         <a class="nav-link" href="#">About</a>
 
       </div>
@@ -83,18 +83,32 @@
 
   <section class="py-5 text-center  bg-lightblue">
     <div class="container">
-      <div class="row py-0">
+      <div class="row py-10">
 
-          <div class="me-10 col-lg-6 col-md-8 mx-auto text-center">
-            <img src="{% static 'laptop.png' %}"width="550"/>
-          </div>
           <div class="col-lg-6 col-md-8 mx-auto text-center">
-            <h1 class="fw-light">Tagline</h1>
-            <p class="lead">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie sapien ac nisi maximus ornare at quis ex. Aliquam lacinia, diam id efficitur consectetur, orci sapien porttitor magna, vel convallis justo lorem et turpis. Nam pulvinar velit eget leo commodo, a lacinia nisl cursus. Integer aliquam nulla accumsan scelerisque aliquam. Morbi id justo lorem. Aenean sollicitudin est nec cursus tristique. Etiam accumsan sapien metus. Duis consectetur neque id tellus feugiat fringilla. Nullam blandit congue lectus, a fermentum urna sollicitudin vel. Suspendisse ultrices, urna ut interdum viverra, tellus sapien consectetur quam, vitae placerat justo risus placerat nulla. Fusce neque nibh, facilisis ut mattis sit amet, vestibulum vitae tellus. Donec sagittis molestie porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque ligula nisl, suscipit id accumsan elementum, interdum ac nisl.
-            </p>
+            <h1 class="fw-light">Contact Us</h1>
+          </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="py-5 text-center">
+    <div class="container">
+      <div class="row py-3">
+
+          <div class=" card col-lg-6 col-md-8 mx-auto text-center justify-content-center ">
+            <h2 class="fw-light py-2">Email</h2>
+            <img src="{% static 'mail-icon.png' %}" height="70" class="py-2 mx-auto"/>
             <p>
-              <a href="{% url 'contact' %}" class="btn btn-primary my-2">Contact Us</a>
+              <a href="mailto:prithviraj.das@jiniussolutions.com" class="btn btn-primary my-2">Send us an email</a>
+             <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
+            </p>
+          </div>
+          <div class=" card col-lg-6 col-md-8 mx-auto text-center justify-content-center">
+            <h2 class="fw-light py-2">Call</h2>
+            <img src="{% static 'phone-icon.png' %}" height="70" class="py-2 mx-auto"/>
+            <p>
+              (925)963-1783
              <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
             </p>
           </div>
@@ -102,10 +116,8 @@
       </div>
     </div>
   </section>
-  <section class="py-5 text-center">
-    <h1 class="fw-Light">Our Services</h1>
-    //services here
-  </section>
+
+
 
 
 </div>
