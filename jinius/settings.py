@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'jiniusdb',
         'USER': 'postgres',
-        'PASSWORD': '2937Moreno',
+        'PASSWORD': 'django1234',
         'HOST': 'localhost',
         'PORT': '5432',
 
