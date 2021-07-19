@@ -32,65 +32,7 @@
 <meta name="theme-color" content="#7952b3">
 
 
-<style>
-     
-  *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Oswald', sans-serif;
-  }
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-
-  .jumbotron{
-    position: absolute;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-    right:0;
-    height: 75vh;
-    transition: 0.5s;
-    display: flex;
-    align-items: center;
-    padding: 100px;
-    color: white;
-  }
-  
-  .jumbotron video {
-    position: absolute;
-    z-index: -5;
-    top: 0;
-    left:0;
-    width:100%;
-    height: 75vh;
-    margin: 0;
-    padding: 0;
-  
-    object-fit: cover;
-    
-  }
-  .jumbotron .hero-content {
-    z-index: 2;
-    position: relative;
-
-  }
-  
-
-  .bg-lightblue{
-    background-color: #5BD1F5;
-  }
-  body{
-    color: white;
-  }
-
-
-</style>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
   </head>
@@ -126,9 +68,9 @@
           </video>
   
     
-          <div class="col-lg-6 col-md-8 py-5 hero-content">
-            <h1 class="text-dark py-0">Want to get in touch?</h2>
-            <h3 class="text-dark pb-5">Here's how you can talk to us.</h3>
+          <div class="col-lg-6 col-md-8 py-5 hero-content container">
+            <h1 class="text-light outline py-0">Want to get in touch?</h2>
+            <h3 class="ttext-light outline pb-5">Here's how you can talk to us.</h3>
            
           </div> 
   

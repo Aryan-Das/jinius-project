@@ -1,8 +1,9 @@
 from django.shortcuts import render
-
+from blog.models import Blog
 
 def home(request):
-    return render(request, 'home.html')
+    blogs = Blog.objects.all().order_by('pub_date').reverse()[:2]
+    return render(request, 'home.html',{'blogs':blogs})
 
 
 def contact(request):
@@ -11,4 +12,5 @@ def contact(request):
 
 def about(request):
     return render(request, 'about.html')
+
 

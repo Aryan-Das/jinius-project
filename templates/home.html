@@ -32,63 +32,7 @@
 <meta name="theme-color" content="#7952b3">
 
 
-    <style>
-      *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Oswald', sans-serif;
-      }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-   
-      .jumbotron{
-        position: absolute;
-        justify-content: space-between;
-        position: relative;
-        overflow: hidden;
-        right:0;
-        height: 75vh;
-        transition: 0.5s;
-        display: flex;
-        align-items: center;
-        padding: 100px;
-        color: white;
-      }
-      
-      .jumbotron video {
-        position: absolute;
-        z-index: -5;
-        top: 0;
-        left:0;
-        width:100%;
-        height: 75vh;
-        margin: 0;
-        padding: 0;
-      
-        object-fit: cover;
-       
-      }
-      .jumbotron .hero-content {
-        z-index: 2;
-        position: relative;
-    
-      }
-      
-   
-      .bg-lightblue{
-        background-color: #5BD1F5;
-      }
-      body{
-        color: white;
-      }
-
-    </style>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
   </head>
@@ -124,9 +68,9 @@
         </video>
 
   
-        <div class="col-lg-6 col-md-8 py-5 hero-content">
-          <h1 class="fw-dark py-0">Consulting Done Right.</h2>
-          <h3 class="fw-dark pb-5">Find the right workers to meet your developement needs</h3>
+        <div class="col-lg-6 col-md-8 py-5 hero-content container">
+          <h1 class="fw-dark outline py-0">Consulting Done Right.</h2>
+          <h3 class="fw-dark outline  pb-5">Find the right workers to meet your developement needs</h3>
           <p>
             <a href="{% url 'contact' %}" class="btn btn-primary my-2 fs-4 fw-dark">Get in touch</a>
          
@@ -185,8 +129,27 @@
         
       </div>
       <div class="col">
-        <div class="container text-center">
-          <h3 class="fw-dark py-3">Blog</h3>
+        <div class="container">
+          <h3 class="fw-dark py-3 text-center">Stories</h3>
+          <div class="row">
+            {% for blog in blogs.all %}
+            <div class="card text-center py-0 col mx-2 px-0" style="width: 18rem;">
+              <img class="card-img-top" src={{blog.image.url}} alt="Card image cap">
+              <div class="card-body text-dark text-left py-2" style="text-align: left;">
+                <h5 class="card-title text-center">{{blog.title}}</h5>
+                <p class="card-text">{{blog.summary | linebreaks}}</p>
+
+                <p class="text-center"><a href="{% url 'detail' blog.id %}" class="card-link" style="text-decoration: none;">Keep Reading</a></p>
+              </div>
+            </div>
+          
+    
+          {% endfor %}
+          <div class="text-center container py-2">
+            <a href="{% url 'stories' %}" class="btn btn-primary my-2 fw-dark">More stories</a>
+          </div>
+          </div>
+          
         </div>
       </div>
     </div>

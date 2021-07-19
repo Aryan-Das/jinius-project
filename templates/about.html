@@ -31,65 +31,7 @@
     <meta name="theme-color" content="#7952b3">
 
 
-    <style>
-     
-      *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Oswald', sans-serif;
-      }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-   
-      .jumbotron{
-        position: absolute;
-        justify-content: space-between;
-        position: relative;
-        overflow: hidden;
-        right:0;
-        height: 75vh;
-        transition: 0.5s;
-        display: flex;
-        align-items: center;
-        padding: 100px;
-        color: white;
-      }
-      
-      .jumbotron video {
-        position: absolute;
-        z-index: -5;
-        top: 0;
-        left:0;
-        width:100%;
-        height: 75vh;
-        margin: 0;
-        padding: 0;
-      
-        object-fit: cover;
-        
-      }
-      .jumbotron .hero-content {
-        z-index: 2;
-        position: relative;
-    
-      }
-      
-   
-      .bg-lightblue{
-        background-color: #5BD1F5;
-      }
-      body{
-        color: white;
-      }
-
-  
-    </style>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
   </head>
@@ -124,9 +66,9 @@
     </video>
 
 
-    <div class="col-lg-6 col-md-8 py-5 hero-content">
-      <h1 class="fw-dark py-0">Consulting Done Right.</h2>
-      <h3 class="fw-dark pb-5">Find the right workers to meet your developement needs</h3>
+    <div class="col-lg-6 col-md-8 py-5 hero-content container">
+      <h1 class="fw-dark outline py-0">Consulting Done Right.</h2>
+      <h3 class="fw-dark outline  pb-5">Find the right workers to meet your developement needs</h3>
       <p>
         <a href="{% url 'contact' %}" class="btn btn-primary my-2 fs-4 fw-dark">Get in touch</a>
      
@@ -140,9 +82,7 @@
       <div class="row py-0">
 
           <div class="col-lg-6 col-md-8 mx-auto text-center">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie sapien ac nisi maximus ornare at quis ex. Aliquam lacinia, diam id efficitur consectetur, orci sapien porttitor magna, vel convallis justo lorem et turpis. Nam pulvinar velit eget leo commodo, a lacinia nisl cursus. Integer aliquam nulla accumsan scelerisque aliquam. Morbi id justo lorem. Aenean sollicitudin est nec cursus tristique. Etiam accumsan sapien metus. Duis consectetur neque id tellus feugiat fringilla. Nullam blandit congue lectus, a fermentum urna sollicitudin vel. Suspendisse ultrices, urna ut interdum viverra, tellus sapien consectetur quam, vitae placerat justo risus placerat nulla. Fusce neque nibh, facilisis ut mattis sit amet, vestibulum vitae tellus. Donec sagittis molestie porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque ligula nisl, suscipit id accumsan elementum, interdum ac nisl.
-            </p>
+            
           </div>
 
       </div>
