@@ -32,7 +32,25 @@
 
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+    <style>
+            
+      .jumbotron{
+          position: absolute;
+          justify-content: space-between;
+          position: relative;
+          overflow: hidden;
+          right:0;
+          height:75vh;
+        
+          display: flex;
+          align-items: center;
+          padding: 100px;
+          color: white;
+          background-image: url("static/Computer.jpg");
+          background-size: cover;
+      }
+      
+    </style>
 
   </head>
 <body class="bg-dark">
@@ -61,18 +79,13 @@
 
   <div class="jumbotron jumbotron-fluid">
      
-    <video autoplay muted loop>
-      <source src={% static 'meeting.mp4' %} type="video/mp4">
-    </video>
+    
 
 
     <div class="col-lg-6 col-md-8 py-5 hero-content container">
-      <h1 class="fw-dark outline py-0">Consulting Done Right.</h2>
-      <h3 class="fw-dark outline  pb-5">Find the right workers to meet your developement needs</h3>
-      <p>
-        <a href="{% url 'contact' %}" class="btn btn-primary my-2 fs-4 fw-dark">Get in touch</a>
-     
-      </p>
+      <h1 class="fw-dark outline py-0">About Jinius Solutions</h2>
+      <!-- <h3 class="fw-dark outline  pb-5">Find the right workers to meet your developement needs</h3> -->
+    
     </div> 
 
 

@@ -42,7 +42,7 @@
             overflow: hidden;
             right:0;
             height:75vh;
-            transition: 0.5s;
+   
             display: flex;
             align-items: center;
             padding: 100px;
@@ -51,10 +51,6 @@
             background-size: cover;
         }
         
-        
-
-        
-
     </style>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -101,7 +97,7 @@
    
   </div> 
   <div class="container py-5">
-    <p class="text-light">{{blog.body|linebreaks}}</p>
+    <h6 class="text-light fs-4">{{blog.body|linebreaks}}</h6>
 
   </div>
   <div class="text-center container py-5">

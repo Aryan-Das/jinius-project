@@ -19,7 +19,7 @@
     overflow: hidden;
     right:0;
     height: 75vh;
-    transition: 0.5s;
+    transition: 0.1s;
     display: flex;
     align-items: center;
     padding: 100px;
