@@ -3,6 +3,8 @@
 <html lang="en">
 {% load static %}
 {% load replace_tag %}
+{% load crispy_forms_tags %}
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -107,6 +109,35 @@
 
 
 </div>
+
+<div class="container">
+ 
+  <form method="post">
+    {%csrf_token %}
+    <H2 class=text-center> Comments</H2>
+    {{form|crispy}}
+    <div class="d-grid gap-2">
+      <button class="btn btn-success mt-3">Submit!</button>
+    </div>
+    <!-- <input type ="submit" value="Submit" class="btn btn-primary my-3"> -->
+  </form>
+
+</div>
+{% for comment in comments %}
+<div class="row justify-content-center mt-3 mb-5 container-fluid">
+    <div class="col-md-5 col-sm-12 text-center">
+        <h5><strong>{{comment.name}}</strong></h5>
+        <h6 class="text-muted">{{comment.pub_date}}</h6>
+
+        <p>{{ comment.body}}</p>
+    </div>
+
+</div>
+<hr/>
+{% endfor %}
+</div>
+
+
 </main>
 
 <footer class="text-muted py-5">
