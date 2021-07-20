@@ -4,7 +4,9 @@ from .models import Blog
 
 # Create your views here.
 def allBlogs(request):
+   
     blogs = Blog.objects.all().order_by('pub_date').reverse()
+    length = len(blogs)
     return render(request,'blog/allBlogs.html',{'blogs':blogs})
 
 

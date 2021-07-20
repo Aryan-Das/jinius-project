@@ -3,7 +3,8 @@ from blog.models import Blog
 
 def home(request):
     blogs = Blog.objects.all().order_by('pub_date').reverse()[:2]
-    return render(request, 'home.html',{'blogs':blogs})
+    length = len(blogs)
+    return render(request, 'home.html',{'blogs':blogs,'length':length})
 
 
 def contact(request):
