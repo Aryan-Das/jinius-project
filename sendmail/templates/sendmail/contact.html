@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
 {% load static %}
+{% load crispy_forms_tags %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +33,7 @@
             align-items: center;
             padding: 100px;
             color: white;
-            background-image: url("static/Person with phone.jpg");
+            background-image: url("/static/Person with phone.jpg");
             background-size: cover;
         }
         
@@ -57,23 +58,24 @@
   <body class="bg-dark">
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark py-2">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}">Jinius Solutions</a>
+        <a class="navbar-brand fs-3" href="{% url 'home' %}">Jinius Solutions</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav fs-5">
+          <div class="navbar-nav fs-3">
             <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
-            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-            <a class="nav-link" href="{% url 'about' %}">About</a>
+            <!-- <a class="nav-link" href="{% url 'contact' %}">Contact</a> -->
+            <a class="nav-link" href="{% url 'about' %}">About Us</a>
     
           </div>
         </div>
       </div>
     </nav>
     </header>
+  
   
   <main>
   
@@ -93,31 +95,17 @@
   
      
     </div> 
-  <!-- <section class="py-5 text-center">
-    <div class="container">
-
-      <div class="row">
-
-          <div class=" card col-lg-6 col-md-8 mx-auto text-center justify-content-center bg-dark ">
-            <h2 class="text-light pt-3">Email</h2>
-            <img src="{% static 'mail-icon.png' %}" height="70" class="mx-auto"/>
-            <p>
-              <a href="mailto:prithviraj.das@jiniussolutions.com" class="btn btn-primary my-2">Send us an email</a>
-              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-            </p>
-          </div>
-          <div class=" card col-lg-6 col-md-8 mx-auto text-center justify-content-center bg-dark">
-            <h2 class="text-light">Call</h2>
-            <img src="{% static 'phone-icon.png' %}" height="70" class="mx-auto"/>
-            <p class="text-light">
-              (925)963-1783
-              <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-            </p>
-          </div>
-
-      </div>
+    <div class="container py-5">
+      <form method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <div class="form-actions text-center">
+          <button type="submit" class="btn btn-primary my-4">Send</button>
+        </div>
+      </form>
     </div>
-  </section> -->
+    
+ 
 
 
 
