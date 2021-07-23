@@ -28,6 +28,9 @@
     padding: 100px;
     color: white;
   }
+  .nounderline{
+    text-decoration: none;
+  }
   
   
   .jumbotron video {

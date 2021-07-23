@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'sendmail.apps.SendmailConfig',
 
+
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+   
+  
 ]
 
 ROOT_URLCONF = 'jinius.urls'
@@ -134,14 +137,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-DEFAULT_FROM_EMAIL = 'prithviraj.das@jiniussolutions.com'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
 
-EMAIL_HOST = 'smtp.sendgrid.net' # new
-EMAIL_HOST_USER = 'apikey' # new
-EMAIL_HOST_PASSWORD = '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' # new
-EMAIL_PORT = 587 # new
-EMAIL_USE_TLS = True # new
 
 # CRISPY_TEMPLATE_PACK = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
